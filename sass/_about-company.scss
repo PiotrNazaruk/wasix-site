@@ -1,0 +1,69 @@
+.about{
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-top: 10%;
+}
+.about__wrapper{
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+
+}
+   
+    .about__headline{
+        position: absolute;
+        color: $dark;
+        font-weight: 900;
+        letter-spacing: 2rem;
+        transform: rotate(90deg);
+        font-size: 3rem;
+        right: -35%;
+        top: 35%;
+        text-transform: uppercase;
+        opacity: .1;
+        font-size: 7rem;
+        h2{
+            font-family: 'Poppins', sans-serif;
+        }
+    }
+
+.about__description{
+    width: 50%;
+    text-align: justify;
+    position: relative;
+    height: 80%;
+   
+   
+}
+.about__paragraph--first{
+    position: relative;
+    
+    &::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 10%;
+        left: -33%;
+        background: $shadeno4;
+        top: 0;
+        z-index: -1;
+    }
+}
+.about__paragraph--second{
+    padding-top: 60%;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        height: 62%;
+        width: 30%;
+        right: 0%;
+        background: $shadeno4;
+        bottom: 0;
+        z-index: -1;
+        opacity: .5;
+    }
+
+}

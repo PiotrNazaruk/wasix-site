@@ -1,0 +1,242 @@
+///////////// NAVIGATION /////////////////////
+.header{
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+   
+
+}
+.navigation{
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: $dark;
+    position: absolute;
+    transform: translateX(-100%);
+  
+    @include tablet{
+        height: 10vh;
+        transform: translateX(0%);
+        position: inherit;
+        background: transparent;
+    }
+
+   
+}
+.navigation__media-icons{
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    z-index: 1000;
+   
+    @include tablet{
+        top: 50%;
+        right: 5%;
+        display: flex;
+        flex-direction: column;
+        width: 10%;
+       
+    }
+    .fab{
+        color: white;
+        margin-left: 1rem;
+        position: relative;
+        @include tablet{
+          color: black;
+          margin-top: 2rem;
+        }
+       
+
+    }
+}
+.navigation__container{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    @include tablet{
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+ 
+    ul{
+       margin-right: 1rem;
+       @include tablet{
+           display: flex;
+           flex: 6;
+           justify-content: flex-end;
+       }
+        li{
+            font-size: 1.3rem;
+            color: white;
+            padding: 2rem;
+            text-align: left;
+            position: relative;
+            font-weight: 900;
+            letter-spacing: 1.2rem;
+            @include tablet{
+                font-size: 1rem;
+                margin-left: 2rem;
+                letter-spacing: 1rem;
+                font-weight: 300;
+                color: $dark;
+                
+            }
+            
+            &::before{
+                content: '';
+                position: absolute;
+                right: -10%;
+                top: 50%;
+                background: white;
+                height: .1rem;
+                width: 10%;
+                @include tablet{
+                    left: -10%;
+
+                }
+            }
+        }
+    }
+}
+.navigation__logo{
+    @include tablet{
+        flex: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+   
+}
+.navigation__background-text{
+    position: absolute;
+    @include tablet{
+        display: none;
+    }
+    
+    span{
+        position: absolute;
+        color: white;
+        font-weight: 900;
+        letter-spacing: 2rem;
+        transform: rotate(-90deg);
+        font-size: 8rem;
+        right: 0%;
+        top: 0%;
+        text-transform: uppercase;
+        opacity: .2;
+    }
+}
+.burger{
+    position: absolute;
+    height: 2rem;
+    width: 3rem;
+    overflow: hidden;
+    z-index: 1000;
+    right: 5%;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    @include tablet{
+        display: none;
+    }
+    .burger__line{
+        width: 70%;
+        height: .2rem;
+        background: black;
+    }
+}
+.active{
+    transition: 1s all ease;
+    transform: translateX(-200%);
+}
+.open-hide{
+  transform: translateX(0%);
+  transition: .5s all  ease-in-out;
+ 
+
+
+}
+.black{
+    background: white !important;
+}
+
+.header__hero-section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablet{
+        height: 90vh;
+    }
+}
+.header__logo{
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    font-size: 2rem;
+}
+.hero-section__container{
+    height: 50%;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+
+    @include tablet{
+        height: 80%;
+        
+    }
+
+
+    }
+    .header__job-placement{
+        flex-grow: 2;
+        height: 70%;
+        align-self: center;
+        background: url('/pictures/job-placement.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: grayscale(70%);
+        margin-right: 1rem;
+        background-position-x: 70%;
+      
+        
+    }
+    .header__transport{
+        height: 100%;
+        flex-grow: 3;
+        background: url('/pictures/building-business-ceiling-209251.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: grayscale(80%);
+        background-position-x: 100%;
+    }
+    .header__it{
+        flex-grow: 2;
+        height: 70%;
+        align-self: center;
+        background: url('/pictures/it.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: grayscale(70%);
+        margin-left: 1rem;
+        background-position-x: 40%;
+    }
+    .header__media-icons{
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        .fab{
+            margin-right: 2rem;
+        }
+    }

@@ -1,0 +1,84 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+   
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+
+  
+
+}
+body{
+}
+img{
+    max-width: 100%;
+    display: block;
+    height: 100%;
+}
+H1{
+   
+    
+}
+li{
+    list-style-type: none;
+}
+H2{
+    font-family: 'Chonburi', cursive;
+}
+h3{
+    
+}
+img{
+    max-width: 100%;
+    height: 100%;
+}
+p{
+    
+}
+/*
+map buttons
+*/
+
+
+@mixin phone-landscape {
+    @media(min-width: 600px) and (orientation : landscape) and (max-width : 700px){
+        @content
+    };
+}
+
+@mixin phone-landscape-l {
+    @media(min-width: 700px) and (orientation : landscape) and (max-height : 400px){
+        @content
+    };
+}
+@mixin small-phone{
+    @media(max-width: 320px) {@content};
+}
+@mixin tablet {
+    @media(min-width: 768px) {@content};
+}
+@mixin desktop{
+    @media(min-width: 1024px){
+        @content;
+    }
+}
+@mixin desktop-1440{
+    @media(min-width: 1440px){
+        @content;
+    }
+}
+@mixin desktop-1900{
+    @media(min-width: 1900px){
+        @content;
+    }
+}
+@mixin desktop-2500{
+    @media(min-width: 2500px){
+        @content;
+    }
+}
